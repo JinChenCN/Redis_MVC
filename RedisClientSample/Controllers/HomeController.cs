@@ -60,6 +60,14 @@ namespace RedisClientSample.Controllers
 
                 mostSelling.Add(upgradedPhone);
 
+                message += "Phones in mostSelling list: ";
+                foreach (Phone ph in mostSelling)
+                {
+                    message += " Id : " + ph.Id;
+                    message += " Model : " + ph.Model;
+                }
+
+
                 // remove item from the list
                 oldCollection.Remove(upgradedPhone);
 
